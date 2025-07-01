@@ -1,185 +1,48 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>System Has Crashed – Bookstore</title>
   <link rel="stylesheet" href="style.css" />
   <script src="https://unpkg.com/scrollreveal"></script>
-  <script src="particles.js"></script>
-  <style>
-    #progressBar { height: 4px; background: #0ff; position: fixed; top: 0; left: 0; width: 0; z-index: 9999; }
-    .chat-icon {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 50px;
-      z-index: 9999;
-    }
-    .search-bar {
-      text-align: center;
-      padding: 1rem;
-    }
-    .search-bar input {
-      width: 60%;
-      padding: 10px;
-      font-size: 16px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-  </style>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body>
-  <div id="particles-js"></div>
-  <div id="progressBar"></div>
-  <header>
-    <nav class="navbar">
-      <h1 class="glitch" data-text="System Has Crashed">System Has Crashed</h1>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#categories">Categories</a></li>
-        <li><a href="#usedbooks">Used Books</a></li>
-        <li><a href="#courses">Courses</a></li>
-        <li><a href="#reviews">Reviews</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#affiliate">Affiliate</a></li>
-        <li><a href="https://razorpay.me/@arshadanis" class="buy">Buy</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main id="home">
-    <section class="hero">
-      <h2 class="glow">Welcome Reader 👋</h2>
-      <p>This is the official launchpad for the debut psychological novel <strong>“System Has Crashed”</strong> by Arshad Anis.</p>
-      <a href="https://razorpay.me/@arshadanis" target="_blank">
-        <button class="btn-buy">Buy Now – ₹299</button>
-      </a>
-    </section>
+<!-- Lottie Preloader -->
+<div id="preloader">
+  <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_qp1q7mct.json" background="transparent" speed="1" loop autoplay></lottie-player>
+</div>
 
-    <div class="search-bar">
-      <input type="text" id="bookSearch" onkeyup="filterBooks()" placeholder="Search books...">
-    </div>
+<header class="navbar">
+  <h1 class="logo glitch" data-text="System Has Crashed">System Has Crashed</h1>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#categories">Categories</a></li>
+      <li><a href="#usedbooks">Used Books</a></li>
+      <li><a href="#courses">Courses</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="https://razorpay.me/@arshadanis" target="_blank" class="btn">Buy Now</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <section class="trailer">
-      <h3>🎥 Watch Trailer</h3>
-      <video controls width="100%">
-        <source src="videos/Realistic promotional video -01.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    </section>
+<main id="home">
+  <section class="hero fade-in">
+    <h2>Welcome Reader 👋</h2>
+    <p>This is the official launchpad for the debut psychological novel <strong>“System Has Crashed”</strong> by Arshad Anis.</p>
+    <a href="https://razorpay.me/@arshadanis" target="_blank" class="btn">Buy Now – ₹299</a>
+  </section>
+</main>
 
-    <section class="book-section" id="about">
-      <div class="book-card">
-        <h3>System Has Crashed</h3>
-        <p>Psychological fiction micro-novel.</p>
-        <a href="https://razorpay.me/@arshadanis" target="_blank">
-          <button class="btn-buy">Buy Now – ₹299</button>
-        </a>
-      </div>
-    </section>
+<footer>
+  <p>&copy; 2025 Arshad Anis | All Rights Reserved</p>
+</footer>
 
-    <section id="categories" class="categories">
-      <h3>📚 Book Categories</h3>
-      <ul>
-        <li>Mental Health</li>
-        <li>Fiction & Micro-novels</li>
-        <li>Tech-Philosophy</li>
-        <li>Life Design & Mindset</li>
-      </ul>
-    </section>
-
-    <section class="author-picks">
-      <h3>🎯 Author’s Picks</h3>
-      <div class="book-card">
-        <h4>Glitch Diaries</h4>
-        <p>Neural thought experiments in story form.</p>
-      </div>
-    </section>
-
-    <section id="usedbooks" class="used-books">
-      <h3>📦 Used Book Marketplace</h3>
-      <p>Buy curated second-hand books handpicked by Arshad. New stock added weekly.</p>
-      <a href="/used.html"><button class="btn-buy">Browse Used Books</button></a>
-    </section>
-
-    <section id="courses" class="courses">
-      <h3>🎓 Online Courses</h3>
-      <p>Coming soon: Learn digital publishing, storytelling, and web skills directly from Arshad.</p>
-      <ul>
-        <li>📘 Build a Mini Server on Your Phone (Beginner to Pro)</li>
-        <li>🧠 Design a Personal Brand as an Author</li>
-        <li>💡 Earn from Self-Publishing & Web Projects</li>
-      </ul>
-      <button class="btn-buy" onclick="alert('Course signup launching soon!')">Pre-enroll</button>
-    </section>
-
-    <section class="author-info">
-      <h3>👨‍💻 About the Author</h3>
-      <p>Arshad Anis is a multipotentialite author and creator passionate about storytelling, technology, and self-improvement.</p>
-    </section>
-
-    <section id="reviews" class="reviews">
-      <h3>🌟 Reader Reviews</h3>
-      <div class="carousel">
-        <div class="review">"Unforgettable!" – Ayesha K.</div>
-        <div class="review">"Dark, raw, brilliant." – Faheem S.</div>
-        <div class="review">"Felt seen in every line." – Zaynab P.</div>
-      </div>
-    </section>
-
-    <section id="affiliate" class="affiliate">
-      <h3>🤝 Become an Affiliate</h3>
-      <p>Share the book and earn ₹50 per sale. Join our affiliate program and start earning today.</p>
-      <a href="https://forms.gle/z6bRQzZxHUYEDGnK6" target="_blank">
-        <button class="btn-buy">Join Affiliate Program</button>
-      </a>
-    </section>
-
-    <section id="contact" class="contact">
-      <h3>📬 Contact the Author</h3>
-      <iframe 
-        src="https://docs.google.com/forms/d/e/1FAIpQLSfzIht-ZiadTnsLlgBebB06p7aG4KpLtSlGnE0TyAx7Z1pgxw/viewform?embedded=true"
-        width="100%" height="600" frameborder="0">Loading…</iframe>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Arshad Anis | All Rights Reserved</p>
-    <div class="counter">
-      <img src="https://hitwebcounter.com/counter/counter.php?page=21027558&style=0001&nbdigits=4&type=page&initCount=0" title="Counter Widget" alt="Visitor Counter" />
-    </div>
-  </footer>
-
-  <a href="https://wa.me/919326722120" target="_blank">
-    <img src="https://img.icons8.com/ios-filled/50/00ff00/whatsapp.png" class="chat-icon" />
-  </a>
-
-  <script>
-    ScrollReveal().reveal('.glow, .btn-buy, .book-card, .reviews, .author-info, .contact, .categories, .author-picks, .used-books, .courses, .affiliate', {
-      delay: 200,
-      distance: '30px',
-      duration: 1000,
-      reset: true,
-    });
-
-    window.onscroll = function() {
-      let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-      let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      let scrolled = (winScroll / height) * 100;
-      document.getElementById("progressBar").style.width = scrolled + "%";
-    }
-
-    function filterBooks() {
-      const input = document.getElementById("bookSearch").value.toLowerCase();
-      const cards = document.querySelectorAll(".book-card");
-      cards.forEach(card => {
-        const text = card.textContent.toLowerCase();
-        card.style.display = text.includes(input) ? "block" : "none";
-      });
-    }
-  </script>
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

@@ -5,8 +5,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>System Has Crashed – Bookstore</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background-color: #0f0f0f;
+      color: #fff;
+      font-family: 'Orbitron', sans-serif;
+      margin: 0;
+      transition: background 0.3s, color 0.3s;
+    }
+    header, footer {
+      text-align: center;
+      background: #111;
+      padding: 1rem;
+      border-bottom: 1px solid #444;
+    }
+    nav a {
+      margin: 0 10px;
+      color: #0ff;
+      text-decoration: none;
+    }
+    .carousel, .quote-box, .newsletter, section {
+      margin: 2rem auto;
+      padding: 1.5rem;
+      max-width: 800px;
+    }
+    .carousel {
+      background: #111;
+      color: #0ff;
+      font-style: italic;
+      border-left: 4px solid #0ff;
+    }
+    .quote-box {
+      background: #1a1a1a;
+      color: #f0f;
+      font-family: monospace;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .book-card {
+      background: #1a1a1a;
+      padding: 1rem;
+      border-radius: 10px;
+      text-align: center;
+      margin-top: 1rem;
+    }
+    .newsletter iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+    }
+    .toggle-dark {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background: #0ff;
+      color: #000;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .dark-mode {
+      background-color: #fff;
+      color: #000;
+    }
+  </style>
 </head>
 <body>
+
+  <button class="toggle-dark" onclick="toggleDarkMode()">🌙 Toggle Theme</button>
+
   <header>
     <h1>📘 System Has Crashed</h1>
     <p>By Arshad Anis</p>
@@ -21,8 +89,13 @@
     <section>
       <h2>Welcome Reader 👋</h2>
       <p>This is the official launchpad for the debut psychological novel <strong>“System Has Crashed”</strong>.</p>
-      <button onclick="window.location.href='/buy.html'">Buy Now – ₹299</button>
+      <a href="https://razorpay.me/@arshadanis" target="_blank" onclick="confirmPurchase()">
+        <button style="background-color:#0ff; color:#000; font-weight:bold; padding:12px 24px; border-radius:8px; border:none; cursor:pointer; font-size:16px;">
+          Buy “System Has Crashed” – ₹299
+        </button>
+      </a>
     </section>
+
     <section>
       <h3>🎥 Watch Trailer</h3>
       <video controls width="100%">
@@ -30,12 +103,64 @@
         Your browser does not support the video tag.
       </video>
     </section>
+
+    <div class="carousel" id="carousel"></div>
+    <div class="quote-box" id="glitch-quote"></div>
+
+    <section class="book-card">
+      <h3>System Has Crashed</h3>
+      <p>Psychological fiction micro-novel.</p>
+      <a href="https://razorpay.me/@arshadanis" target="_blank" onclick="confirmPurchase()">
+        <button style="background-color:#0ff; color:#000; font-weight:bold; padding:12px 24px; border-radius:8px; border:none; cursor:pointer; font-size:16px;">
+          Buy Now – ₹299
+        </button>
+      </a>
+    </section>
+
+    <section class="newsletter">
+      <h3>📩 Sign Up for Updates</h3>
+      <iframe 
+        src="https://docs.google.com/forms/d/e/1FAIpQLSfzIht-ZiadTnsLlgBebB06p7aG4KpLtSlGnE0TyAx7Z1pgxw/viewform?embedded=true">
+        Loading…
+      </iframe>
+    </section>
   </main>
 
   <footer>
     <p>&copy; 2025 Arshad Anis | All Rights Reserved</p>
+    <a href="https://www.hitwebcounter.com" target="_blank">
+      <img src="https://hitwebcounter.com/counter/counter.php?page=21027558&style=0001&nbdigits=4&type=page&initCount=0"
+        title="Counter Widget" alt="Visit counter For Websites"/>
+    </a>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    function confirmPurchase() {
+      alert("Thank you for supporting! Redirecting to Razorpay...");
+    }
+
+    const quotes = [
+      "\u201cI crashed because the system refused to feel.\u201d",
+      "\u201c404: Meaning not found.\u201d",
+      "\u201cEven the algorithm got anxious.\u201d",
+      "\u201cYou cannot debug a dream.\u201d"
+    ];
+    document.getElementById("glitch-quote").innerText = quotes[Math.floor(Math.random() * quotes.length)];
+
+    const testimonials = [
+      "\ud83c\udf1f \u201cDark, raw, brilliant.\u201d – Faheem S.",
+      "\ud83d\udcac \u201cFelt seen in every line.\u201d – Zaynab P.",
+      "\ud83d\udd25 \u201cUnforgettable.\u201d – Ayesha K."
+    ];
+    let tIndex = 0;
+    setInterval(() => {
+      document.getElementById("carousel").innerText = testimonials[tIndex];
+      tIndex = (tIndex + 1) % testimonials.length;
+    }, 4000);
+
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
 </body>
 </html>

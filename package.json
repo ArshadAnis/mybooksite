@@ -1,7 +1,7 @@
 {
   "name": "system-has-crashed-bookstore",
   "version": "1.0.0",
-  "description": "A simple bookstore for System Has Crashed by Arshad Anis",
+  "description": "A simple bookstore website for System Has Crashed by Arshad Anis",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"

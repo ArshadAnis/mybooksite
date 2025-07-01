@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>System Has Crashed – Bookstore</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <script src="particles.js"></script>
+
   <style>
     #progressBar { height: 4px; background: #0ff; position: fixed; top: 0; left: 0; width: 0; z-index: 9999; }
     .chat-icon {
@@ -30,7 +29,7 @@
   </style>
 </head>
 <body>
-  <div id="particles-js"></div>
+  
   <div id="progressBar"></div>
   <header>
     <nav class="navbar">
@@ -156,13 +155,7 @@
     <img src="https://img.icons8.com/ios-filled/50/00ff00/whatsapp.png" class="chat-icon" />
   </a>
 
-  <script>
-    ScrollReveal().reveal('.glow, .btn-buy, .book-card, .reviews, .author-info, .contact, .categories, .author-picks, .used-books, .courses, .affiliate', {
-      delay: 200,
-      distance: '30px',
-      duration: 1000,
-      reset: true,
-    });
+  
 
     window.onscroll = function() {
       let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
@@ -180,6 +173,6 @@
       });
     }
   </script>
-  <script src="script.js"></script>
+  
 </body>
 </html>

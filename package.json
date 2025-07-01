@@ -1,11 +1,13 @@
 {
   "name": "system-has-crashed-bookstore",
   "version": "1.0.0",
-  "description": "System Has Crashed – Bookstore by Arshad Anis",
+  "description": "A simple bookstore for System Has Crashed by Arshad Anis",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
+  "author": "Arshad Anis",
+  "license": "MIT",
   "dependencies": {
     "express": "^4.18.2"
   }

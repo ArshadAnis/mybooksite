@@ -1,72 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>System Has Crashed – Bookstore</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
-
-  <!-- Linked CSS files -->
-  <link rel="stylesheet" href="/style.css">
-  <link rel="stylesheet" href="/animation.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <header>
-    <h1>System Has Crashed</h1>
+    <h1>📘 System Has Crashed</h1>
+    <p>By Arshad Anis</p>
     <nav>
-      <a href="#books">Books</a>
-      <a href="#about">Author</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#contact">Contact</a>
+      <a href="/">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/buy.html">Buy Book</a>
     </nav>
   </header>
 
-  <section id="books">
-    <h2>🧠 Featured Books</h2>
-    <div class="book-grid">
-      <div class="book-card">
-        <h3>System Has Crashed</h3>
-        <p>Psychological fiction micro-novel.</p>
-        <button onclick="alert('Coming Soon!')">Buy ₹299</button>
-      </div>
-      <div class="book-card">
-        <h3>Glitch Diaries</h3>
-        <p>A journey into neural oddities.</p>
-        <button>Buy ₹249</button>
-      </div>
-    </div>
-  </section>
-
-  <section class="about" id="about">
-    <h2>👨‍💻 About the Author</h2>
-    <p>Arshad Anis is a multipotentialite author and creator passionate about storytelling, technology, and self-improvement. His works fuse modern life with psychological depth and innovation.</p>
-  </section>
-
-  <section class="reviews" id="reviews">
-    <h2>🌟 Reader Reviews</h2>
-    <ul>
-      <li>"Unforgettable!" – Ayesha K.</li>
-      <li>"Dark, raw, brilliant." – Faheem S.</li>
-      <li>"Felt seen in every line." – Zaynab P.</li>
-    </ul>
-  </section>
-
-  <section class="contact" id="contact">
-    <h2>📬 Contact & Socials</h2>
-    <p>📧 arshadshaikh9876.as@gmail.com</p>
-    <p>📱 <a href="https://instagram.com/1arshadshaikh" style="color:#0ff;">Instagram</a> | <a href="https://facebook.com/arshadanis" style="color:#0ff;">Facebook</a></p>
-  </section>
+  <main>
+    <section>
+      <h2>Welcome Reader 👋</h2>
+      <p>This is the official launchpad for the debut psychological novel <strong>“System Has Crashed”</strong>.</p>
+      <button onclick="window.location.href='/buy.html'">Buy Now – ₹299</button>
+    </section>
+    <section>
+      <h3>🎥 Watch Trailer</h3>
+      <video controls width="100%">
+        <source src="videos/Realistic promotional video -01.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </section>
+  </main>
 
   <footer>
-    © 2025 Arshad Anis. All rights reserved.
+    <p>&copy; 2025 Arshad Anis | All Rights Reserved</p>
   </footer>
 
-  <!-- Linked JS files -->
-  <script src="/script.js"></script>
-  <script src="/animations.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>
